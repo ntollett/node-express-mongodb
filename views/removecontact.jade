@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  form#formRemoveContact(name="removecontact",method="post",action="/deletecontact")
+    input#inputFirstName(type="text", placeholder="First Name", name="firstname", required)
+    br
+    input#inputLastName(type="text", placeholder="Last Name", name="lastname", required)
+    br
+    button#btnSubmit(type="submit") submit

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.
+      Contact List
+  ul
+      each contact in contactlist
+          li
+              p #{contact.name.last}, #{contact.name.first}, #{contact.title}, #{contact.company), #{contact.email}, #{contact.wheremet}, #{contact.whenmet}, #{contact.comments}

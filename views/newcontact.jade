@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddContact(name="addcontact",method="post",action="/addcontact")
+    input#inputFirstName(type="text", placeholder="First Name", name="firstname", required)
+    br
+    input#inputLastName(type="text", placeholder="Last Name", name="lastname", required)
+    br
+    input#inputTitle(type="text", placeholder="Title", name="title")
+    br
+    input#inputCompany(type="text", placeholder="Company", name="company")
+    br
+    input#inputEmail(type="email", placeholder="email@email.com", name="email", required)
+    br
+    input#inputWhereMet(type="text", placeholder="Where Met", name="wheremet")
+    br
+    input#inputWhenMet(type="date", name="whenmet", required)
+    br
+    input#inputComments(type="text", placeholder="Comments", name="comments")
+    br
+    button#btnSubmit(type="submit") submit
+  
+  script(src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js')
+  script.
+    document.getElementById('inputWhenMet').value = moment().format('YYYY-MM-DD');
